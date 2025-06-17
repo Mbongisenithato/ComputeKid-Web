@@ -1,0 +1,11 @@
+
+# Ignore system directories
+AppData/
+Application Data/
+Cookies/
+Documents/
+Downloads/
+Favorites/
+NTUSER.DAT*
+.gitignore_global
+
