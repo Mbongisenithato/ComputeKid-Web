@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="config.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Header -->
+    <header>
+        <h1>Contact Book App</h1>
+    </header>
+
+    <!-- 🔹 Main Content -->
+    <main class="container">
+        <section class="card">
+            <h2><strong>Search Contacts</strong></h2>
+            <input type="text" id="searchInput" placeholder="Search contacts...">
+            <button id="searchBtn">🔍 Search</button>
+            <p id="searchResults"></p>
+        </section>
+
+        <section class="card">
+            <h2><strong>Contact List</strong></h2>
+            <button id="fetchContactsBtn">📄 Load Contacts</button>
+            <button id="refreshContactsBtn">🔁 Refresh</button>
+            <table id="contactTable">
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="contactList"></tbody>
+            </table>
+            <div id="paginationControls"></div>
+        </section>
+
+        <section class="card">
+            <h2><strong>Contact Details</strong></h2>
+            <p id="contactDetails">Click on a contact to view details.</p>
+        </section>
+
+        <section class="card">
+            <h2><strong>Add New Contact</strong></h2>
+            <form id="addContactForm">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br/>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br/>
+
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required><br/>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br/>
+
+                <label for="avatar">Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar"><br/>
+
+                <button type="submit">➕ Add Contact</button>
+                <p id="addContactMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("searchBtn").addEventListener("click", searchContacts);
+        document.getElementById("fetchContactsBtn").addEventListener("click", fetchContacts);
+        document.getElementById("refreshContactsBtn").addEventListener("click", fetchContacts);
+        document.getElementById("addContactForm").addEventListener("submit", submitContact);
+
+        // 🔹 Ensure search function filters results dynamically
+        function searchContacts() {
+            const query = document.getElementById("searchInput").value.trim().toLowerCase();
+            const rows = document.querySelectorAll("#contactList tr");
+
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                row.style.display = name.includes(query) ? "" : "none";
+            });
+        }
+
+        // 🔹 Load contacts automatically on page load
+        document.addEventListener("DOMContentLoaded", fetchContacts);
+    </script>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <p>Powered by APIs for real-time contact management.</p>
+    </footer>
+
+</body>
+</html>

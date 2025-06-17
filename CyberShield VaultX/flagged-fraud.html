@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flagged Fraudulent Transactions | CyberShield VaultX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>Flagged Fraudulent Transactions</strong></h1>
+    <p><strong>Review high-risk transactions, analyze security threats, and take action.</strong></p>
+    <img src="images/flagged-fraud.png" alt="AI Fraud Detection" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2><strong>Fraud Analysis Report</strong></h2>
+      <p><strong>The following transactions have been flagged for investigation.</strong></p>
+
+      <table id="flaggedFraudTable">
+        <tr>
+          <th>Transaction ID</th>
+          <th>Amount</th>
+          <th>Location</th>
+          <th>Reason for Flagging</th>
+          <th>Recommended Action</th>
+        </tr>
+        <tr>
+          <td>#92345</td>
+          <td>$5,000</td>
+          <td>Nigeria</td>
+          <td>Unusual transaction pattern</td>
+          <td><button id="applyLiveFraudPrevention92345">🚨 Prevent Fraud & Notify Authorities</button></td>
+        </tr>
+        <tr>
+          <td>#56789</td>
+          <td>$9,900</td>
+          <td>Russia</td>
+          <td>High-risk location</td>
+          <td><button id="applyLiveFraudPrevention56789">🚨 Prevent Fraud & Notify Authorities</button></td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2><strong>Live Security Notifications</strong></h2>
+      <p><strong>Authorities & affected users have been notified in real time.</strong></p>
+      <button id="viewFraudNotificationsButton">📩 View Fraud Alerts</button>
+      <p id="fraudNotification"></p>
+    </section>
+
+    <!-- 🔹 Finance Sector Fraud Prevention -->
+    <section class="card">
+      <h2><strong>Finance Industry Fraud Detection</strong></h2>
+      <p>Monitor banking transactions for fraud patterns.</p>
+      <button id="scanFinanceFraudButton">🏦 Scan Financial Transactions</button>
+      <button onclick="window.location.href='finance-security.html'">📊 View Finance Security Trends</button>
+      <p id="financeFraudOutput"></p>
+    </section>
+
+    <!-- 🔹 Aerospace Industry Security Monitoring -->
+    <section class="card">
+      <h2><strong>Aerospace Industry Secure Transaction Validation</strong></h2>
+      <p>Detect fraudulent aerospace procurement transactions.</p>
+      <button id="scanAerospaceFraudButton">🚀 Validate Aerospace Transactions</button>
+      <button onclick="window.location.href='aerospace-security.html'">📊 View Aerospace Security Reports</button>
+      <p id="aerospaceFraudOutput"></p>
+    </section>
+
+    <!-- 🔹 AI/Tech Industry Cybersecurity Protection -->
+    <section class="card">
+      <h2><strong>AI/Tech Industry Risk Forecasting</strong></h2>
+      <p>Use machine learning algorithms to detect anomalies in AI-driven transactions.</p>
+      <button id="scanTechFraudButton">🔮 AI Transaction Fraud Detection</button>
+      <button onclick="window.location.href='ai-security.html'">📊 AI Security Risk Analysis</button>
+      <p id="techFraudOutput"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='fraud-detection.html'"><strong>Back to Fraud Detection</strong></button>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='cyber-defence.html'"><strong>Explore Global Cyber Defense Reports</strong></button>
+  </footer>
+
+</body>
+</html>

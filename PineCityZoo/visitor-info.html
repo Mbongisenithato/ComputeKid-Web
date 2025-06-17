@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Visitor Info</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Mobile-Friendly Navigation -->
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="tickets.html"><strong>Tickets</strong></a></li>
+                <li><a href="exhibits.html"><strong>Exhibits</strong></a></li>
+                <li><a href="events.html"><strong>Events</strong></a></li>
+                <li><a href="visitor-info.html"><strong>Visitor Info</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- 🔹 Visitor Information Section -->
+    <div id="main-home">
+        <h2>Visitor Information 🏞️</h2>
+        <p>Everything you need to know before visiting Pine City Zoo!</p>
+    </div>
+
+    <div id="info-box-full">
+        <img src="images/sky.jpg" alt="Visitor Info" class="responsive-image">
+        <h3>📌 Important Visitor Information:</h3>
+        <ul>
+            <li><strong>Opening Hours:</strong> Monday - Sunday, 9:00 AM - 6:00 PM</li>
+            <li><strong>Location:</strong> Pine City Zoo, 123 Safari Drive, Pine City</li>
+            <li><strong>Parking:</strong> Free parking available at the entrance</li>
+            <li><strong>Accessibility:</strong> Wheelchair-friendly paths and services</li>
+            <li><strong>Rules & Guidelines:</strong> No outside food, respect the animals, follow staff instructions</li>
+        </ul>
+
+        <h3>🦓 Visitor Services:</h3>
+        <ul>
+            <li>Guided Tours & Wildlife Education</li>
+            <li>Zoo Shuttle Service & Walking Trails</li>
+            <li>Gift Shops & Souvenirs</li>
+            <li>Dining Areas & Cafeterias</li>
+        </ul>
+
+        <h3>📍 Need Assistance?</h3>
+        <p>Visit the **Information Desk** near the entrance or contact us anytime!</p>
+
+        <button onclick="window.location.href='#'"><strong>Contact Us</strong></button>
+    </div>
+
+    <!-- 🔹 Footer Navigation -->
+    <div id="tabs-bottom">
+        <a href="weather.html"><strong>Weather</strong></a>
+        <a href="feedback.html"><strong>Feedback</strong></a>
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="places.html"><strong>Places</strong></a>
+        <a href="animals.html"><strong>Animals</strong></a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

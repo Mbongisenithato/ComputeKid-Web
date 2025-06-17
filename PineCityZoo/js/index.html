@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Login, Math Operations & Weather Advice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Load script after HTML -->
+</head>
+<body>
+
+    <!-- 🔹 Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="../index.html"><strong>Home</strong></a></li>
+            <li><a href="../animals.html"><strong>Animals</strong></a></li>
+            <li><a href="../elephant.html"><strong>Elephant</strong></a></li>
+            <li><a href="../gemsbok.html"><strong>Gemsbok</strong></a></li>
+            <li><a href="../giraffe.html"><strong>Giraffe</strong></a></li>
+            <li><a href="../gorilla.html"><strong>Gorilla</strong></a></li>
+            <li><a href="../koala.html"><strong>Koala</strong></a></li>
+            <li><a href="../lion.html"><strong>Lion</strong></a></li>
+            <li><a href="../monkey.html"><strong>Monkey</strong></a></li>
+            <li><a href="../tiger.html"><strong>Tiger</strong></a></li>
+            <li><a href="../warthog.html"><strong>Warthog</strong></a></li>
+            <li><a href="../panda.html"><strong>Panda</strong></a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Login Section -->
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" placeholder="Enter your username" required /><br>
+
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" placeholder="Enter your password" required /><br>
+
+        <button type="button" id="loginBtn">Login</button>
+    </form>
+
+    <p id="output">Login status will appear here...</p>
+
+    <!-- 🔹 Calculator Section -->
+    <h2>Calculator</h2>
+    <label for="numInput1">Enter first number:</label>
+    <input type="number" id="numInput1" placeholder="Number 1" required>
+
+    <label for="numInput2">Enter second number:</label>
+    <input type="number" id="numInput2" placeholder="Number 2" required>
+
+    <button id="calculateSumBtn">Calculate Sum</button>
+    <button id="calculateProductBtn">Calculate Product</button>
+    <button id="calculateDifferenceBtn">Calculate Difference</button>
+
+    <p id="addition">Sum result will appear here!</p>
+    <p id="multiplication">Multiplication result will appear here!</p>
+    <p id="subtraction">Subtraction result will appear here!</p>
+
+    <hr>
+
+    <!-- 🔹 Weather Selection -->
+    <h2>Weather Advice</h2>
+    <label for="weather">Choose Weather:</label>
+    <select id="weather">
+        <option value="sunny">Sunny</option>
+        <option value="windy">Windy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+    </select>
+
+    <button onclick="getWeatherAdvice()">Check Advice</button>
+    <p id="weatherAdvice">Weather advice will appear here...</p>
+
+    <!-- 🔹 JavaScript Code -->
+    <script>
+        // 🔹 Function to process arithmetic operations
+        function addNumbers(num1, num2) {
+            return Number(num1) + Number(num2);
+        }
+
+        function multiplyNumbers(num1, num2) {
+            return Number(num1) * Number(num2);
+        }
+
+        function subtractNumbers(num1, num2) {
+            return Number(num1) - Number(num2);
+        }
+
+        // 🔹 Function to validate and convert user input
+        function validateAndConvert(input) {
+            var number = parseFloat(input);
+            return isNaN(number) ? null : number;
+        }
+
+        // 🔹 Function to display sum result
+        function displaySum() {
+            var num1 = validateAndConvert(document.getElementById("numInput1").value);
+            var num2 = validateAndConvert(document.getElementById("numInput2").value);
+
+            document.getElementById("addition").innerHTML =
+                num1 !== null && num2 !== null ? `${num1} + ${num2} = ${addNumbers(num1, num2)}` : "❌ Please enter valid numbers.";
+        }
+
+        // 🔹 Function to display multiplication result
+        function displayMultiplication() {
+            var num1 = validateAndConvert(document.getElementById("numInput1").value);
+            var num2 = validateAndConvert(document.getElementById("numInput2").value);
+
+            document.getElementById("multiplication").innerHTML =
+                num1 !== null && num2 !== null ? `${num1} × ${num2} = ${multiplyNumbers(num1, num2)}` : "❌ Please enter valid numbers.";
+        }
+
+        // 🔹 Function to display subtraction result
+        function displayDifference() {
+            var num1 = validateAndConvert(document.getElementById("numInput1").value);
+            var num2 = validateAndConvert(document.getElementById("numInput2").value);
+
+            document.getElementById("subtraction").innerHTML =
+                num1 !== null && num2 !== null ? `${num1} - ${num2} = ${subtractNumbers(num1, num2)}` : "❌ Please enter valid numbers.";
+        }
+
+        // 🔹 Function to provide weather advice
+        function getWeatherAdvice() {
+            var weatherSelected = document.getElementById("weather").value;
+            var advice = "";
+
+            switch (weatherSelected) {
+                case "sunny":
+                    advice = "☀️ Wear your sunglasses!";
+                    break;
+                case "windy":
+                    advice = "🍃 Wear a jacket!";
+                    break;
+                case "rainy":
+                    advice = "🌧️ Bring an umbrella!";
+                    break;
+                case "snowy":
+                    advice = "❄️ Wear a coat and stay warm!";
+                    break;
+                default:
+                    advice = "🤔 Please select a valid weather option.";
+            }
+
+            document.getElementById("weatherAdvice").innerHTML = advice;
+        }
+
+        // 🔹 Attach event listeners to buttons once DOM loads
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("calculateSumBtn").addEventListener("click", displaySum);
+            document.getElementById("calculateProductBtn").addEventListener("click", displayMultiplication);
+            document.getElementById("calculateDifferenceBtn").addEventListener("click", displayDifference);
+            document.getElementById("loginBtn").addEventListener("click", verifyUser);
+        });
+    </script>
+
+</body>
+</html>

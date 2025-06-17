@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="config.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Header -->
+    <header>
+        <h1>Add Contact</h1>
+    </header>
+
+    <!-- 🔹 Contact Form -->
+    <main class="container">
+        <section class="card">
+            <h2><strong>Add a New Contact</strong></h2>
+            <form id="addContactForm">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br/>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br/>
+
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required><br/>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br/>
+
+                <label for="avatar">Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*"><br/>
+
+                <button type="submit">➕ Add Contact</button>
+                <p id="addContactMessage"></p>
+            </form>
+            
+            <br/>
+            <button id="homeLink">🏠 Home</button>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("addContactForm").addEventListener("submit", submitContact);
+        document.getElementById("homeLink").addEventListener("click", homeLink);
+
+        async function submitContact(event) {
+            event.preventDefault();
+
+            const form = document.getElementById("addContactForm");
+            const formData = new FormData(form);
+
+            if (!validateForm(formData)) return;
+
+            const newContact = {
+                firstname: formData.get("firstname").trim(),
+                lastname: formData.get("lastname").trim(),
+                mobile: formData.get("mobile").trim(),
+                email: formData.get("email").trim()
+            };
+
+            try {
+                const response = await fetch(`${CONFIG.ROOT_PATH}controller/add-contact/`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        ...CONFIG.AUTH_HEADER
+                    },
+                    body: JSON.stringify(newContact)
+                });
+
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+                document.getElementById("addContactMessage").textContent = "✅ Contact added successfully!";
+                form.reset();
+            } catch (error) {
+                document.getElementById("addContactMessage").textContent = `⚠️ Submission failed: ${error.message}`;
+                console.error(error);
+            }
+        }
+
+        function validateForm(formData) {
+            const email = formData.get("email").trim();
+            const mobile = formData.get("mobile").trim();
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("❌ Please enter a valid email address.");
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(mobile)) {
+                alert("❌ Mobile number must be 10 digits.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function homeLink() {
+            window.location.href = "index.html";
+        }
+
+        // 🔹 Ensure form autofocus on load
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("firstname").focus();
+        });
+    </script>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <p>Manage your contacts easily with real-time updates.</p>
+    </footer>
+
+</body>
+</html>

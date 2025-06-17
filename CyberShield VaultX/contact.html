@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact CyberShield VaultX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1 class="header-title"><strong>Contact CyberShield VaultX</strong></h1>
+    <p class="text-paragraph"><strong>Reach out for inquiries, partnerships, and AI-powered cybersecurity solutions.</strong></p>
+    <img src="images/contact.png" alt="Cybersecurity Contact" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2><strong>Send Us a Message</strong></h2>
+      <form id="contactForm">
+        <label for="name"><strong>Name:</strong></label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message"><strong>Your Message:</strong></label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit"><strong>Send Message</strong></button>
+        <button onclick="window.location.href='support.html'">📩 Contact Support</button>
+      </form>
+      <p id="formResponse"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Live AI-Powered Cyber Threat Detection</strong></h2>
+      <p>Get real-time AI insights and security guidance for financial protection, threat detection, and digital safety.</p>
+      <button id="runThreatSimulationButton">🔍 Activate AI Threat Detection</button>
+      <button onclick="window.location.href='threats.html'">📊 View Latest Threat Intelligence</button>
+      <p id="threatOutput"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Predictive Cybersecurity Analytics</strong></h2>
+      <p>Machine learning algorithms detect anomalies and identify cyber risks before they escalate.</p>
+      <button onclick="window.location.href='predictive-progress.html'">🔮 Buy Predictive Cybersecurity Analytics</button>
+      <button onclick="window.location.href='cyber-trends.html'">📊 View AI Cybersecurity Predictions</button>
+    </section>
+
+    <section class="card">
+      <h2><strong>CyberShield AI Marketplace</strong></h2>
+      <p>Purchase AI-driven cybersecurity reports and solutions.</p>
+      <button id="buyThreatReportButton">📊 Buy Threat Intelligence Report</button>
+      <button onclick="window.location.href='marketplace-trends.html'">🛒 Explore AI Marketplace</button>
+    </section>
+
+    <section class="card">
+      <h2><strong>Contact Our Team</strong></h2>
+      <p>Looking to collaborate? Reach out for industry partnerships or AI-driven cybersecurity consulting.</p>
+      <button onclick="window.location.href='partnerships.html'">🤝 Explore Partnership Opportunities</button>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@cybershieldvaultx.com">support@cybershieldvaultx.com</a></li>
+        <li><strong>Phone:</strong> +1 877-224-1042</li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/cybershield">CyberShield VaultX</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <h2><strong>Stay Connected</strong></h2>
+    <ul>
+      <li><a href="index.html"><strong>Back to Home</strong></a></li>
+      <li><a href="contact.html"><strong>Contact Support</strong></a></li>
+      <li><a href="faq.html"><strong>Frequently Asked Questions</strong></a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

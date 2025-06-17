@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield VaultX - Live Achievements</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>CyberShield Live Achievements</strong></h1>
+    <p><strong>Earn cybersecurity badges by completing live defense challenges.</strong></p>
+    <img src="images/achievement-badge.png" alt="Cybersecurity Achievements" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <!-- 🔹 Live Achievement Tracker -->
+    <section class="card">
+      <h2><strong>Your Cyber Defense Badges</strong></h2>
+      <p><strong>Complete challenges to unlock new cybersecurity achievements.</strong></p>
+      <button id="trackAchievementsButton">Track My Achievements</button>
+      <p id="achievementOutput"></p>
+    </section>
+
+    <!-- 🔹 Upcoming Challenges -->
+    <section class="card">
+      <h2><strong>Unlock More Badges</strong></h2>
+      <p><strong>Continue earning achievements by participating in live cybersecurity exercises.</strong></p>
+      <button onclick="window.location.href='training.html'"><strong>Start Training</strong></button>
+      <button onclick="window.location.href='leaderboard.html'"><strong>View Leaderboard</strong></button>
+    </section>
+
+    <!-- 🔹 AI Threat Intelligence Hub -->
+    <section class="card">
+      <h2><strong>AI-Powered Cyber Threat Intelligence</strong></h2>
+      <p><strong>Live updates on cybersecurity attacks and AI-driven security strategies.</strong></p>
+      <button id="runThreatButton">Run AI Threat Intelligence</button>
+      <p id="threatOutput"></p>
+    </section>
+
+    <!-- 🔹 Predictive Cybersecurity Analytics -->
+    <section class="card">
+      <h2><strong>Predictive Cybersecurity Analytics</strong></h2>
+      <p>Machine learning algorithms detect anomalies and identify cyber risks before they escalate.</p>
+      <button onclick="window.location.href='predictive-progress.html'">🔮 Buy Predictive Cybersecurity Analytics</button>
+    </section>
+
+    <!-- 🔹 Enterprise Security Framework -->
+    <section class="card">
+      <h2><strong>Enterprise Security Framework</strong></h2>
+      <p>Advanced AI security models for financial institutions, aerospace companies, and technology enterprises.</p>
+      <button id="activateEnterpriseButton">🛡️ Activate Enterprise Security Framework</button>
+      <p id="enterpriseSecurityOutput"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='leaderboard.html'"><strong>Back to Leaderboard</strong></button>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Mobile-Friendly Navigation -->
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="tickets.html"><strong>Tickets</strong></a></li>
+                <li><a href="exhibits.html"><strong>Exhibits</strong></a></li>
+                <li><a href="events.html"><strong>Events</strong></a></li>
+                <li><a href="visitor-info.html"><strong>Visitor Info</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Events Section -->
+    <div id="main-home">
+        <h2>Pine City Zoo Events 🎉</h2>
+        <p>Join us for exciting wildlife experiences, educational talks, and family-friendly entertainment at the zoo!</p>
+    </div>
+
+    <div id="info-box-full">
+        <img src="images/outdoor_restaurant.jpg" alt="Zoo Events" class="responsive-image">
+        <h3>🎤 Upcoming Events:</h3>
+        <ul>
+            <li><strong>Wildlife Adventure Tour:</strong> Explore hidden gems in the zoo - May 12</li>
+            <li><strong>Meet the Zookeepers:</strong> Q&A session with expert caretakers - May 18</li>
+            <li><strong>Night Safari:</strong> Discover nocturnal animals up close - May 24</li>
+            <li><strong>Zoo Summer Festival:</strong> Music, food, and animal encounters - June 2</li>
+        </ul>
+
+        <h3>📍 Where Do Events Take Place?</h3>
+        <p>Events are held at various zoo locations including the **Amphitheatre**, **Safari Zone**, and **Main Plaza**.</p>
+
+        <button onclick="window.location.href='#'"><strong>Get Event Tickets</strong></button>
+    </div>
+
+    <!-- 🔹 Footer Navigation -->
+    <div id="tabs-bottom">
+        <a href="weather.html">Weather</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="animals.html">Animals</a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

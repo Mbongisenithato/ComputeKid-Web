@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter API Key</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="config.js"></script>
+    <script src="enter-api-key.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Header -->
+    <header>
+        <h1>Enter Your API Key</h1>
+    </header>
+
+    <!-- 🔹 API Key Input Section -->
+    <main class="container">
+        <section class="card">
+            <h2><strong>API Key Setup</strong></h2>
+            <input type="text" id="apiKeyInput" placeholder="Enter API Key">
+            <button id="saveKeyBtn">🔑 Save Key</button>
+            <p id="keyMessage"></p>
+        </section>
+
+        <section class="card">
+            <h2><strong>Proceed to Contact Book</strong></h2>
+            <button id="openAppBtn">📖 Open Contact Book</button>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("saveKeyBtn").addEventListener("click", storeApiKey);
+        document.getElementById("openAppBtn").addEventListener("click", redirectToApp);
+
+        async function storeApiKey() {
+            const apiKey = document.getElementById("apiKeyInput").value.trim();
+
+            if (!apiKey) {
+                document.getElementById("keyMessage").textContent = "⚠️ Please enter a valid API key!";
+                return;
+            }
+
+            const response = await fetch(CONFIG.ROOT_PATH + "controller/api-key/?apiKey=" + apiKey);
+            const result = await response.text();
+
+            if (result === "1") {
+                localStorage.setItem("apiKey", apiKey);
+                document.getElementById("keyMessage").textContent = "✅ API Key saved successfully!";
+                window.location.href = "index.html";
+            } else {
+                alert("❌ Invalid API key entered!");
+            }
+        }
+
+        function redirectToApp() {
+            const storedApiKey = localStorage.getItem("apiKey");
+
+            if (!storedApiKey) {
+                document.getElementById("keyMessage").textContent = "⚠️ Please save a valid API key before proceeding.";
+                return;
+            }
+
+            window.location.href = "index.html";
+        }
+
+        // 🔹 Validate API Key on Load
+        document.addEventListener("DOMContentLoaded", () => {
+            const storedApiKey = localStorage.getItem("apiKey");
+            if (storedApiKey) {
+                document.getElementById("keyMessage").textContent = "✅ API Key already set.";
+            }
+        });
+    </script>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <p>Ensure your API key is valid for seamless access.</p>
+    </footer>
+
+</body>
+</html>

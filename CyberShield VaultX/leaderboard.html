@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield VaultX - Live Cybersecurity Training</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>Cyber Defense Gamified Training</strong></h1>
+    <p><strong>Compete in live cybersecurity challenges and earn achievements.</strong></p>
+    <img src="images/leaderboard.png" alt="Cyber Defense Training" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <!-- 🔹 Live Cybersecurity Battle -->
+    <section class="card">
+      <h2><strong>Live Cybersecurity Battle</strong></h2>
+      <p><strong>Defend against AI-generated cyber threats in real-time.</strong></p>
+      <button id="startLiveGameButton">Start Cyber Battle</button>
+      <button onclick="window.location.href='battle-report.html'">📊 View Battle Analytics</button>
+      <p id="gameOutput"></p>
+    </section>
+
+    <!-- 🔹 Leaderboard Table -->
+    <section class="card">
+      <h2><strong>Top Cyber Defenders</strong></h2>
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Achievements</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><strong>Alice</strong></td>
+          <td>3500</td>
+          <td><strong>AI Cyber Master</strong></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Bob</strong></td>
+          <td>3000</td>
+          <td><strong>Network Defender</strong></td>
+        </tr>
+      </table>
+      <button onclick="window.location.href='leaderboard.html'">📊 View Full Leaderboard</button>
+    </section>
+
+    <!-- 🔹 Gamified Cybersecurity Achievements -->
+    <section class="card">
+      <h2><strong>Unlock Achievements</strong></h2>
+      <p><strong>Earn new badges as you progress through cybersecurity challenges.</strong></p>
+      <button onclick="window.location.href='achievement-badge.html'">📜 View Achievements</button>
+      <button onclick="window.location.href='progress-tracker.html'">📊 Track Progress</button>
+    </section>
+
+    <!-- 🔹 AI Threat Intelligence Hub -->
+    <section class="card">
+      <h2><strong>AI-Powered Cyber Threat Intelligence</strong></h2>
+      <p><strong>Live updates on cybersecurity attacks and AI-driven security strategies.</strong></p>
+      <button id="runThreatSimulationButton">Run AI Threat Intelligence</button>
+      <button onclick="window.location.href='threats.html'">📊 Explore Threat Reports</button>
+      <p id="threatOutput"></p>
+    </section>
+
+    <!-- 🔹 Predictive Cybersecurity Analytics -->
+    <section class="card">
+      <h2><strong>Predictive Cybersecurity Analytics</strong></h2>
+      <p>Machine learning algorithms detect anomalies and identify cyber risks before they escalate.</p>
+      <button onclick="window.location.href='predictive-progress.html'">🔮 Buy Predictive Cybersecurity Analytics</button>
+      <button onclick="window.location.href='cyber-trends.html'">📊 View Cyber Risk Predictions</button>
+    </section>
+
+    <!-- 🔹 Enterprise Security Framework -->
+    <section class="card">
+      <h2><strong>Enterprise Security Framework</strong></h2>
+      <p>Advanced AI security models for financial institutions, aerospace companies, and technology enterprises.</p>
+      <button id="activateEnterpriseSecurityButton">🛡️ Activate Enterprise Security Framework</button>
+      <button onclick="window.location.href='enterprise-trends-security.html'">📊 Explore Enterprise Security Framework</button>
+      <p id="enterpriseSecurityOutput"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='training.html'"><strong>Back to Cyber Training</strong></button>
+    <button onclick="window.location.href='cyber-defense.html'"><strong>📊 Global Cyber Defense Strategies</strong></button>
+  </footer>
+
+</body>
+</html>

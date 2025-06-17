@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Places</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="animals.html"><strong>Animals</strong></a></li>
+                <li><a href="map.html"><strong>Map</strong></a></li>
+                <li><a href="places.html"><strong>Places</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-home">
+        <h2>EXPLORE PINE CITY ZOO 🏞️</h2>
+        <p>Find exciting locations, entertainment areas, and relaxing spots at Pine City Zoo!</p>
+    </div>
+
+    <!-- 🔹 Places Section -->
+    <div id="content">
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/amphitheatre-tn.png" alt="Amphitheatre Thumbnail">
+            <h3>AMPHITHEATRE</h3>
+            <p>Catch an educational and entertaining event.</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/insect-house-tn.png" alt="Insect House Thumbnail">
+            <h3>INSECT HOUSE</h3>
+            <p>Creepy crawlies of every kind you can imagine!</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/monkey-trail-tn.png" alt="Monkey Trail Thumbnail">
+            <h3>MONKEY TRAIL</h3>
+            <p>Take a walk or ride through this challenging obstacle course.</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/coffee-shop-tn.png" alt="Wild Things Coffee Shop Thumbnail">
+            <h3>WILD THINGS COFFEE SHOP</h3>
+            <p>Enjoy a cuppa or a dessert here.</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/lost-forest-tn.png" alt="Lost Forest Thumbnail">
+            <h3>THE LOST FOREST</h3>
+            <p>Relax and have a picnic under the trees by the lake.</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/pizza-shop-tn.png" alt="Mo's Pizza Thumbnail">
+            <h3>MO'S PIZZA</h3>
+            <p>Scrumptious pizzas and pastas for the family.</p>
+        </a>
+
+        <a class="info-box" href="#">
+            <img class="right" src="images/next-arrow.png" alt="Next">
+            <img src="images/restaurant-tn.png" alt="Dine @ The Zoo Thumbnail">
+            <h3>DINE @THE ZOO</h3>
+            <p>Enjoy gourmet meals in a serene outdoor setting.</p>
+        </a>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="#"><strong>WEATHER</strong></a>
+        <a href="#"><strong>FEEDBACK</strong></a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

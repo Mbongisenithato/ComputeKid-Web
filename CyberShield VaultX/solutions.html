@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield VaultX - AI Cybersecurity Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>CyberShield AI Cybersecurity Hub</strong></h1>
+    <p><strong>Integrating AI-driven fraud prevention, blockchain security, compliance monitoring, and penetration testing.</strong></p>
+    <img src="images/solutions.png" alt="AI Cybersecurity Hub" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2><strong>Fraud Prevention & Risk Analysis</strong></h2>
+      <p>AI-driven real-time monitoring detects suspicious financial transactions and prevents cyber fraud.</p>
+      <button id="detectLiveFraudButton">🔍 Run AI Fraud Detection</button>
+      <button id="applyLiveFraudPreventionButton">🚨 Prevent Fraud & Notify Authorities</button>
+      <button onclick="window.location.href='fraud-analysis.html'">📊 View Fraud Prevention Report</button>
+      <p id="fraudDetectionOutput"></p>
+      <p id="fraudSolution"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Blockchain-Powered Security</strong></h2>
+      <p>Industry-leading encryption and AI-driven access control prevent unauthorized digital intrusions.</p>
+      <button id="runBlockchainValidationButton">🔐 Validate Blockchain Transactions</button>
+      <button onclick="window.location.href='blockchain-security.html'">📊 Blockchain Security Overview</button>
+      <p id="blockchainOutput"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>AI Compliance & Insider Threat Detection</strong></h2>
+      <p>Advanced security models ensure financial and enterprise compliance while detecting potential insider threats.</p>
+      <button id="runComplianceCheckButton">✅ Run AI Compliance Audit</button>
+      <button onclick="window.location.href='compliance-security.html'">📊 AI Compliance Solutions</button>
+      <p id="complianceOutput"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Live Penetration Testing & Exploit Simulation</strong></h2>
+      <p>Analyze vulnerabilities using AI-driven security audits.</p>
+      <button id="performLiveScanButton">🛡️ Run Live Vulnerability Scan</button>
+      <button id="simulateLiveExploitButton">⚠️ Simulate Live Exploit</button>
+      <button id="deployLiveFixButton">✅ Apply Live Security Fix</button>
+      <button onclick="window.location.href='penetration-testing.html'">📊 View Penetration Testing Reports</button>
+      <p id="pentestResult"></p>
+      <p id="fixResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='cyber-defence.html'"><strong>Explore Cyber Defense Strategies</strong></button>
+  </footer>
+
+</body>
+</html>

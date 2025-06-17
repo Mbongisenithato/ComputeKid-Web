@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield VaultX - Cyber Defense Training</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1 class="header-title"><strong>Cyber Defense Training</strong></h1>
+    <p class="text-paragraph"><strong>Enhance your cybersecurity skills with AI-powered training challenges.</strong></p>
+    <img src="images/training.png" alt="Cyber Defense Training" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <!-- 🔹 Interactive Security Challenges -->
+    <section class="card">
+      <h2><strong>Interactive Security Challenges</strong></h2>
+      <p><strong>Test your ability to detect threats and prevent cyberattacks.</strong></p>
+      <button id="startLiveFraudDetectionButton">🔍 Begin AI Fraud Detection</button>
+      <button id="startLivePenetrationTestingButton">🛡️ Begin Penetration Testing</button>
+      <button onclick="window.location.href='cyber-defense-challenges.html'">📊 View Challenge Analytics</button>
+      <p id="challengeOutput"></p>
+    </section>
+
+    <!-- 🔹 Cyber Defense Labs -->
+    <section class="card">
+      <h2><strong>Cyber Defense Labs</strong></h2>
+      <p><strong>Practice securing networks and identifying vulnerabilities.</strong></p>
+      <button id="launchCyberLabButton">🔬 Start Cyber Lab Training</button>
+      <button onclick="window.location.href='labs.html'">📊 View Lab Analytics</button>
+      <p id="labOutput"></p>
+    </section>
+
+    <!-- 🔹 Gamified Cybersecurity Training -->
+    <section class="card">
+      <h2><strong>Gamified Cybersecurity Training</strong></h2>
+      <p><strong>Engage in AI-driven simulations, live threat analysis, and interactive cybersecurity challenges.</strong></p>
+      <button onclick="window.location.href='leaderboard.html'">📊 View Leaderboard</button>
+      <button onclick="window.location.href='achievement-badge.html'">📜 View Achievements</button>
+      <button onclick="window.location.href='progress-tracker.html'">📊 Track Progress</button>
+    </section>
+
+    <!-- 🔹 AI Threat Intelligence Hub -->
+    <section class="card">
+      <h2><strong>CyberShield Threat Intelligence Hub</strong></h2>
+      <p><strong>Subscribe to AI-powered security insights and industry reports tailored for corporate risk management.</strong></p>
+      <button id="subscribePremiumButton">📩 Subscribe to AI Insights</button>
+      <button onclick="window.location.href='threats.html'">📊 View Latest Threat Reports</button>
+    </section>
+  </main>
+
+  <footer>
+    <h2><strong>Stay Connected</strong></h2>
+    <ul>
+      <li><a href="index.html"><strong>Back to Home</strong></a></li>
+      <li><a href="contact.html"><strong>Contact CyberShield</strong></a></li>
+      <li><a href="cyber-defense.html"><strong>Explore Cyber Defense Strategies</strong></a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

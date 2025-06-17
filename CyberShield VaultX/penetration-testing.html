@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Penetration Testing | CyberShield VaultX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>Live Penetration Testing</strong></h1>
+    <p><strong>Simulate ethical hacking methods to identify and patch security vulnerabilities in real-time.</strong></p>
+    <img src="images/penetration.png" alt="Live Penetration Testing" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2><strong>Challenge: Test System Vulnerabilities & Apply Security Fixes</strong></h2>
+      <p><strong>Use penetration testing techniques to analyze and secure the system dynamically.</strong></p>
+
+      <div id="pentestArea">
+        <p><strong>Target System: Web Server (IP: 192.168.1.10)</strong></p>
+        <button id="performLiveScanButton">Run Live Vulnerability Scan</button>
+        <button id="simulateLiveExploitButton">Simulate Live Exploit</button>
+        <button id="deployLiveFixButton">Apply Live Security Fix</button>
+      </div>
+      <p id="pentestResult"></p>
+      <p id="fixResult"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Live AI-Powered Cyber Threat Detection</strong></h2>
+      <p><strong>Get real-time AI insights and security guidance for financial protection, threat detection, and digital safety.</strong></p>
+      <button id="runThreatSimulationButton">🔍 Activate AI Threat Detection</button>
+      <p id="threatOutput"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Predictive Cybersecurity Analytics</strong></h2>
+      <p>Machine learning algorithms detect anomalies and identify cyber risks before they escalate.</p>
+      <button onclick="window.location.href='predictive-progress.html'">🔮 Buy Predictive Cybersecurity Analytics</button>
+    </section>
+
+    <section class="card">
+      <h2><strong>CyberShield AI Marketplace</strong></h2>
+      <p>Purchase AI-driven cybersecurity reports and solutions.</p>
+      <button onclick="buyProduct('threatReport')">Buy Threat Intelligence Report</button>
+    </section>
+
+    <section class="card">
+      <h2><strong>Enterprise Security Framework</strong></h2>
+      <p>Advanced AI security models for financial institutions, aerospace companies, and technology enterprises.</p>
+      <button id="activateEnterpriseSecurityButton">🛡️ Activate Enterprise Security Framework</button>
+      <p id="enterpriseSecurityOutput"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='training.html'"><strong>Back to Cyber Training</strong></button>
+  </footer>
+
+</body>
+</html>

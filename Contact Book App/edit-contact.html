@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="config.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Header -->
+    <header>
+        <h1>Edit Contact</h1>
+    </header>
+
+    <!-- 🔹 Contact Form -->
+    <main class="container">
+        <section class="card">
+            <h2><strong>Edit Contact Information</strong></h2>
+            <form id="editContactForm">
+                <div id="avatarImage"></div>
+
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br/>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br/>
+
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required><br/>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br/>
+
+                <label for="avatar">Change Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*"><br/>
+
+                <button type="submit">✅ Update Contact</button>
+                <p id="editMessage"></p>
+            </form>
+
+            <br/>
+            <button id="homeLink">🏠 Home</button>
+            <button id="deleteContactBtn">🗑️ Delete Contact</button>
+        </section>
+    </main>
+
+    <script>
+        var id = getId();
+
+        document.getElementById("homeLink").addEventListener("click", homeLink);
+        document.getElementById("editContactForm").addEventListener("submit", updateContact);
+        document.getElementById("deleteContactBtn").addEventListener("click", deleteContact);
+
+        console.log("The contact ID is: " + id);
+
+        function getId() {
+            const url = window.location.href;
+            const pos = url.indexOf("#");
+            return pos !== -1 ? url.slice(pos + 1) : null;
+        }
+
+        async function getContact() {
+            try {
+                const response = await fetch(`${CONFIG.BASE_API_URL}?id=${id}`, {
+                    headers: CONFIG.AUTH_HEADER
+                });
+
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+                const data = await response.json();
+                displayContactData(data[0]);
+            } catch (error) {
+                console.error("❌ Error fetching contact:", error);
+            }
+        }
+
+        function homeLink() {
+            window.location.href = "index.html";
+        }
+
+        function displayContactData(contact) {
+            document.getElementById("avatarImage").innerHTML =
+                `<img src="${CONFIG.ROOT_PATH}controller/uploads/${contact.avatar}" width="200" alt="Contact Avatar"/>`;
+
+            document.getElementById("firstname").value = contact.firstname;
+            document.getElementById("lastname").value = contact.lastname;
+            document.getElementById("mobile").value = contact.mobile;
+            document.getElementById("email").value = contact.email;
+        }
+
+        async function updateContact(event) {
+            event.preventDefault();
+
+            const form = document.getElementById("editContactForm");
+            const formData = new FormData(form);
+
+            if (!validateForm(formData)) return;
+
+            const updatedContact = {
+                firstname: formData.get("firstname").trim(),
+                lastname: formData.get("lastname").trim(),
+                mobile: formData.get("mobile").trim(),
+                email: formData.get("email").trim()
+            };
+
+            try {
+                const response = await fetch(`${CONFIG.BASE_API_URL}/${id}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                        ...CONFIG.AUTH_HEADER
+                    },
+                    body: JSON.stringify(updatedContact)
+                });
+
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+                document.getElementById("editMessage").textContent = "✅ Contact updated successfully!";
+            } catch (error) {
+                document.getElementById("editMessage").textContent = `⚠️ Update failed: ${error.message}`;
+                console.error(error);
+            }
+        }
+
+        async function deleteContact() {
+            try {
+                const response = await fetch(`${CONFIG.BASE_API_URL}/${id}`, {
+                    method: "DELETE",
+                    headers: CONFIG.AUTH_HEADER
+                });
+
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+                alert("✅ Contact deleted successfully!");
+                homeLink();
+            } catch (error) {
+                alert(`⚠️ Deletion failed: ${error.message}`);
+                console.error(error);
+            }
+        }
+
+        function validateForm(formData) {
+            const email = formData.get("email").trim();
+            const mobile = formData.get("mobile").trim();
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("❌ Please enter a valid email address.");
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(mobile)) {
+                alert("❌ Mobile number must be 10 digits.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Load contact details on page load
+        if (id) {
+            getContact();
+        }
+    </script>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <p>Manage your contacts effortlessly with real-time updates.</p>
+    </footer>
+
+</body>
+</html>

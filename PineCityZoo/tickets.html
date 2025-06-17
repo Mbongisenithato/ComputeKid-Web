@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Tickets</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Mobile-Friendly Navigation -->
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="tickets.html"><strong>Tickets</strong></a></li>
+                <li><a href="exhibits.html"><strong>Exhibits</strong></a></li>
+                <li><a href="events.html"><strong>Events</strong></a></li>
+                <li><a href="visitor-info.html"><strong>Visitor Info</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- 🔹 Ticket Section -->
+    <div id="main-home">
+        <h2>Pine City Zoo Tickets 🎟️</h2>
+        <p>Purchase your tickets for an unforgettable experience at Pine City Zoo!</p>
+    </div>
+
+    <div id="info-box-full">
+        <img src="images/logo.png" alt="Zoo Tickets" class="responsive-image">
+        <img src="images/tickets.png" alt="Zoo Tickets" class="responsive-image">
+        <h3>🎫 Ticket Options:</h3>
+        <ul>
+            <li><strong>General Admission:</strong> $25 per person</li>
+            <li><strong>Kids (Under 12):</strong> $15 per child</li>
+            <li><strong>Senior Citizens:</strong> $20 per person</li>
+            <li><strong>Family Package:</strong> $80 (2 adults, 2 kids)</li>
+        </ul>
+
+        <h3>📍 How to Buy Tickets:</h3>
+        <p>Purchase tickets **online** or at the **zoo entrance**. Get exclusive discounts for members!</p>
+
+        <button onclick="window.location.href='#'"><strong>Buy Tickets Online</strong></button>
+    </div>
+
+    <!-- 🔹 Footer Navigation -->
+    <div id="tabs-bottom">
+        <a href="weather.html"><strong>Weather</strong></a>
+        <a href="feedback.html"><strong>Feedback</strong></a>
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="places.html"><strong>Places</strong></a>
+        <a href="animals.html"><strong>Animals</strong></a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

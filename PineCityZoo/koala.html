@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Koala</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="tickets.html"><strong>Tickets</strong></a></li>
+                <li><a href="exhibits.html"><strong>Exhibits</strong></a></li>
+                <li><a href="events.html"><strong>Events</strong></a></li>
+                <li><a href="visitor-info.html"><strong>Visitor Info</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Top Tabs -->
+    <div id="tabs-top">
+        <a href="animals.html"><strong>ANIMALS</strong></a>
+        <a href="map.html"><strong>MAP</strong></a>
+        <a href="places.html"><strong>PLACES</strong></a>
+    </div>
+
+    <div id="main-home">
+        <h2>KOALAS 🐨</h2>
+        <img src="images/koala.jpg" alt="Koala">
+
+        <h3>Overview</h3>
+        <p>The koala (*Phascolarctos cinereus*), sometimes inaccurately called "koala bear," is an **arboreal herbivorous marsupial** native to Australia. It is the **only extant representative of the family Phascolarctidae**, and its closest living relatives are **wombats**. Koalas are found in **coastal areas of the mainland’s eastern and southern regions**, inhabiting **Queensland, New South Wales, Victoria, and South Australia**.</p>
+
+        <h3>Physical Characteristics</h3>
+        <p>Koalas are **easily recognizable** by their **stout, tailless body**, **large head**, **round, fluffy ears**, and **large, spoon-shaped nose**. Their body length ranges **from 60 to 85 cm (24 to 33 in)**, and their weight varies **from 4 to 15 kg (9 to 33 lb)**. Their **pelage color** ranges from **silver-grey to chocolate brown**. Northern populations of koalas tend to be **smaller and lighter in color** than those further south.</p>
+
+        <h3>Habitat & Behavior</h3>
+        <p>Koalas primarily **inhabit open eucalypt woodlands**, and their **diet consists mostly of eucalyptus leaves**. Since eucalyptus has **limited nutritional value**, koalas are **largely sedentary** and can **sleep up to 20 hours a day**.</p>
+
+        <p>Koalas are **asocial animals**, with **bonding occurring only between mothers and their offspring**. Adult males **communicate with loud bellows**, used to **intimidate rivals and attract mates**. They **mark their presence** using **secretions from scent glands located on their chests**.</p>
+
+        <h3>Reproduction & Threats</h3>
+        <p>Being **marsupials**, koalas give birth to **underdeveloped young** that **crawl into their mother’s pouch**, staying there **for the first 6–7 months of their lives**. These young, called **joeys**, are fully weaned **around one year old**.</p>
+
+        <p>Koalas have **few natural predators**, but they are **threatened by diseases**, including **Chlamydiaceae bacteria** and the **koala retrovirus**, as well as **bushfires and droughts**.</p>
+
+        <h3>WHERE WILL YOU FIND THEM?</h3>
+        <p>You will find the koalas **next to the giraffe enclosure**.</p>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="weather.html"><strong>WEATHER</strong></a>
+        <a href="feedback.html"><strong>FEEDBACK</strong></a>
+    </div>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

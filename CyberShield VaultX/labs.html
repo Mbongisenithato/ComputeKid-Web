@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Defense Labs | CyberShield VaultX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>Cyber Defense Labs</strong></h1>
+    <p><strong>Advanced cybersecurity solutions tailored for Finance, Aerospace, AI/Tech, Energy, and Logistics industries.</strong></p>
+    <img src="images/labs.png" alt="Cyber Defense Labs" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <!-- 🔹 AI-Powered Threat Intelligence -->
+    <section class="card">
+      <h2><strong>AI-Powered Threat Analysis</strong></h2>
+      <p><strong>Test AI-driven security models against live cyber threats.</strong></p>
+      <button id="runThreatSimulationButton">🔍 Activate AI Threat Detection</button>
+      <button onclick="window.location.href='threats.html'">📊 View Latest Threat Intelligence Reports</button>
+      <p id="threatOutput"></p>
+    </section>
+
+    <!-- 🔹 Network Security Training -->
+    <section class="card">
+      <h2><strong>Network Security & Data Protection</strong></h2>
+      <p><strong>Learn to defend enterprise networks from cyberattacks.</strong></p>
+      <button id="startNetworkTrainingButton">🛡️ Start Network Defense Challenge</button>
+      <button onclick="window.location.href='network-security.html'">📊 Explore Network Security Frameworks</button>
+      <p id="networkSecurityOutput"></p>
+    </section>
+
+    <!-- 🔹 Finance Industry Security -->
+    <section class="card">
+      <h2><strong>Financial Cybersecurity</strong></h2>
+      <p><strong>Prevent banking fraud, unauthorized transactions, and insider threats.</strong></p>
+      <button id="scanFinanceFraudButton">🏦 Scan Financial Transactions</button>
+      <button onclick="window.location.href='finance-security.html'">📊 View Finance Cybersecurity Reports</button>
+      <p id="financeFraudOutput"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='training.html'"><strong>Back to Training</strong></button>
+    <button onclick="window.location.href='cyber-defense.html'"><strong>Explore Global Cyber Defense Strategies</strong></button>
+  </footer>
+
+</body>
+</html>

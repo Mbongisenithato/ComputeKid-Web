@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Exhibits</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Mobile-Friendly Navigation -->
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="tickets.html"><strong>Tickets</strong></a></li>
+                <li><a href="exhibits.html"><strong>Exhibits</strong></a></li>
+                <li><a href="events.html"><strong>Events</strong></a></li>
+                <li><a href="visitor-info.html"><strong>Visitor Info</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- 🔹 Exhibits Section -->
+    <div id="main-home">
+        <h2>Zoo Exhibits 🦁🐯🐒</h2>
+        <p>Explore breathtaking exhibits featuring exotic animals, interactive experiences, and unique conservation efforts.</p>
+    </div>
+
+    <div id="info-box-full">
+        <img src="images/mos-pizza.jpg" alt="Zoo Exhibits" class="responsive-image">
+        <h3>🌎 Featured Exhibits:</h3>
+        <ul>
+            <li><strong>African Safari:</strong> Lions, elephants, giraffes</li>
+            <li><strong>Rainforest Wonders:</strong> Monkeys, exotic birds, reptiles</li>
+            <li><strong>Marine Life:</strong> Penguins, sea lions, fish</li>
+            <li><strong>Reptile House:</strong> Snakes, lizards, tortoises</li>
+            <li><strong>Bird Sanctuary:</strong> Parrots, flamingos, eagles</li>
+        </ul>
+
+        <h3>📍 Explore More at Pine City Zoo:</h3>
+        <p>Visit the **Amphitheatre for live shows** or enjoy a meal at our **Food Court!**</p>
+        <button onclick="window.location.href='#'"><strong>View Animals</strong></button>
+    </div>
+
+    <!-- 🔹 Footer Navigation -->
+    <div id="tabs-bottom">
+        <a href="weather.html">Weather</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="animals.html">Animals</a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="contact.html"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

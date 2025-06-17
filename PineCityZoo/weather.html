@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav id="menu-bar">
+            <div class="hamburger-menu" onclick="toggleMobileNav()">☰</div>
+            <ul class="desktop-nav">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="animals.html"><strong>Animals</strong></a></li>
+                <li><a href="map.html"><strong>Map</strong></a></li>
+                <li><a href="places.html"><strong>Places</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-home">
+        <h2>PINE CITY ZOO WEATHER ☀️🌧️</h2>
+        <p>Stay updated with the latest weather forecast before planning your zoo adventure.</p>
+    </div>
+
+    <!-- 🔹 Weather Info Box -->
+    <div class="info-box-full">
+        <h3>PINE CITY WEATHER</h3>
+        <p>
+            <img class="info-box-weather-icon" src="images/partly-cloudy.png" alt="Weather Icon">
+            Partly Cloudy
+        </p>
+        <p>⬆️ 25°C ⬇️ 16°C</p>
+        <h1 class="info-box-weather-icon">22°C</h1>
+
+        <p><strong>FORECAST</strong></p>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Condition</th>
+                <th>High</th>
+                <th>Low</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>☀️ Sunny</td>
+                <td>27°C</td>
+                <td>18°C</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td><img class="info-box-weather-icon" src="images/sunny.png" alt="Sunny"></td>
+                <td>⬆️ 28°C</td>
+                <td>⬇️ 17°C</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td><img class="info-box-weather-icon" src="images/partly-cloudy.png" alt="Partly Cloudy"></td>
+                <td>⬆️ 28°C</td>
+                <td>⬇️ 15°C</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td><img class="info-box-weather-icon" src="images/rain.png" alt="Rain"></td>
+                <td>⬆️ 28°C</td>
+                <td>⬇️ 17°C</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td><img class="info-box-weather-icon" src="images/sunny.png" alt="Sunny"></td>
+                <td>⬆️ 29°C</td>
+                <td>⬇️ 15°C</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td><img class="info-box-weather-icon" src="images/sunny.png" alt="Sunny"></td>
+                <td>⬆️ 30°C</td>
+                <td>⬇️ 17°C</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td><img class="info-box-weather-icon" src="images/sunny.png" alt="Sunny"></td>
+                <td>⬆️ 28°C</td>
+                <td>⬇️ 16°C</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="#"><strong>FEEDBACK</strong></a>
+    </div>
+
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+            <li><a href="#"><strong>Follow Us</strong></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.style.display = (mobileNav.style.display === "flex" ? "none" : "flex");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Fraud Detection Challenge | CyberShield VaultX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔹 Dynamic Navigation Menu -->
+  <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+
+  <header>
+    <h1><strong>Live Fraud Detection Challenge</strong></h1>
+    <p><strong>Analyze transactions using AI-driven cybersecurity techniques and prevent cyber fraud in real time.</strong></p>
+    <img src="images/fraud-detection.png" alt="AI Fraud Detection Challenge" class="responsive-image" />
+    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2><strong>Challenge: Detect & Prevent Fraudulent Transactions</strong></h2>
+      <p><strong>Scan transactions, flag fraudulent activities, and implement real-time security measures.</strong></p>
+
+      <table id="fraudTable">
+        <tr>
+          <th>Transaction ID</th>
+          <th>Amount</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th>Fraud Risk</th>
+          <th>Preventive Action</th>
+        </tr>
+        <tr>
+          <td>#92345</td>
+          <td>$5,000</td>
+          <td>Nigeria</td>
+          <td><button id="flagLiveFraud92345">🚩 Flag as Fraud</button></td>
+          <td><button id="detectLiveFraud92345">🔍 Run AI Fraud Detection</button></td>
+          <td><button id="applyLiveFraudPrevention92345">🚨 Prevent Fraud & Notify Authorities</button></td>
+        </tr>
+      </table>
+      <p id="fraudDetectionOutput"></p>
+      <p id="fraudAlert"></p>
+      <p id="fraudSolution"></p>
+    </section>
+
+    <section class="card">
+      <h2><strong>Live Security Alerts</strong></h2>
+      <p><strong>Authorities & affected users have been notified in real time.</strong></p>
+      <button id="viewFraudAlertsButton">📩 View Fraud Alerts</button>
+      <p id="fraudNotification"></p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
+    <button onclick="window.location.href='training.html'"><strong>Back to Training</strong></button>
+    <button id="startChallengeButton">🔍 Begin Penetration Testing</button>
+  </footer>
+
+</body>
+</html>
