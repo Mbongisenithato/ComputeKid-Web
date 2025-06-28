@@ -1,0 +1,27 @@
+{
+  "water-security": [
+    {
+      "id": "scanWaterThreatsButton",
+      "output": "waterThreatOutput",
+      "topic": "water-surveillance"
+    },
+    {
+      "id": "runContaminationScanButton",
+      "output": "contaminationOutput",
+      "topic": "water-contaminants"
+    },
+    {
+      "id": "deployWaterIncidentResponseButton",
+      "output": "waterIncidentOutput",
+      "topic": "water-response"
+    }
+  ],
+
+  "ai-security": [
+    {
+      "id": "scanAIDetectorsButton",
+      "output": "aiDetectionOutput",
+      "topic": "ai-model-poisoning"
+    }
+  ]
+}

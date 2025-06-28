@@ -20,7 +20,7 @@
     <h1><strong>Flagged Fraudulent Transactions</strong></h1>
     <p><strong>Review high-risk transactions, analyze security threats, and take action.</strong></p>
     <img src="images/flagged-fraud.png" alt="AI Fraud Detection" class="responsive-image" />
-    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+    <button id="themeToggle"><strong>Toggle Theme</strong></button>
   </header>
 
   <main class="container">
@@ -83,11 +83,22 @@
       <h2><strong>AI/Tech Industry Risk Forecasting</strong></h2>
       <p>Use machine learning algorithms to detect anomalies in AI-driven transactions.</p>
       <button id="scanTechFraudButton">🔮 AI Transaction Fraud Detection</button>
+      <p id="techFraudOutput"></p> <!-- Make sure this line exists below the button -->
       <button onclick="window.location.href='ai-security.html'">📊 AI Security Risk Analysis</button>
-      <p id="techFraudOutput"></p>
+      
     </section>
   </main>
-
+  
+<div class="page-trail-container">
+  <div><strong>⟵ Previous:</strong> <a href="finance-security.html">Finance Security</a></div>
+  <div><strong>Next:</strong> <a href="fraud-analysis.html">Fraud Analysis ⟶</a></div>
+</div>
+  
+  <section class="card">
+  <h2><strong>Live Global Threat Feed</strong></h2>
+  <div id="liveThreatFeed" class="live-feed">📡 Syncing threat updates...</div>
+</section>
+  
   <footer>
     <button onclick="window.location.href='fraud-detection.html'"><strong>Back to Fraud Detection</strong></button>
     <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>

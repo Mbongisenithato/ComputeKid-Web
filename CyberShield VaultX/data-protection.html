@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CyberShield VaultX - Data Protection</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- 🔹 Navigation Menu -->
+    <nav id="menu-bar">
+    <ul class="desktop-nav">
+      <!-- Dynamic menu will be injected here -->
+    </ul>
+  </nav>
+    <!-- 🔹 Main Content -->
+    <main class="container">
+        <section class="card">
+            <h2><strong>CyberShield VaultX - Data Protection</strong></h2>
+            <p>Secure sensitive data across cloud, enterprise, and user environments using AI-powered data loss prevention, encryption, and compliance enforcement.</p>
+            <img src="images/data-protection.png" alt="AI Data Protection Illustration" class="responsive-image" />
+            <button id="themeToggle"><strong>Toggle Theme</strong></button>
+        </section>
+
+        <!-- 🔹 AI-Powered Data Visibility -->
+        <section class="card">
+            <h2><strong>Data Discovery & Classification</strong></h2>
+            <p>Automatically discover sensitive and unstructured data across environments using machine learning-based classification.</p>
+            <button onclick="scanDataAssets()">🔍 Scan Sensitive Data</button>
+            <p id="dataScanOutput"></p>
+        </section>
+
+        <!-- 🔹 Real-Time DLP Enforcement -->
+        <section class="card">
+            <h2><strong>Data Loss Prevention</strong></h2>
+            <p>Monitor and enforce policies on data access, sharing, and leakage across apps and endpoints.</p>
+            <button onclick="enforceDLPPolicies()">🛡️ Apply DLP Controls</button>
+            <p id="dlpPolicyOutput"></p>
+        </section>
+
+        <!-- 🔹 AI-Driven Compliance Analysis -->
+        <section class="card">
+            <h2><strong>Regulatory Compliance Scanning</strong></h2>
+            <p>Analyze security posture and detect compliance gaps against GDPR, HIPAA, POPIA and other frameworks.</p>
+            <button onclick="runComplianceScan()">📜 Run Compliance Check</button>
+            <p id="complianceScanOutput"></p>
+        </section>
+    </main>
+    
+<div class="page-trail-container">
+  <div><strong>⟵ Previous:</strong> <a href="cyber-trends.html">Cyber Trends</a></div>
+  <div><strong>Next:</strong> <a href="energy-analytics.html">Energy Analytics ⟶</a></div>
+</div>
+    
+    <section class="card">
+  <h2><strong>Live Global Threat Feed</strong></h2>
+  <div id="liveThreatFeed" class="live-feed">📡 Syncing threat updates...</div>
+</section>
+    
+    <!-- 🔹 Footer -->
+    <footer>
+        <h2><strong>Stay Connected</strong></h2>
+        <ul>
+            <li><a href="contact.html"><strong>Contact CyberShield</strong></a></li>
+            <li><a href="https://linkedin.com/cybershield"><strong>Connect on LinkedIn</strong></a></li>
+        </ul>
+        <p><a href="index.html"><strong>Back to Home</strong></a></p>
+    </footer>
+
+</body>
+</html>

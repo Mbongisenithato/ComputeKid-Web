@@ -20,7 +20,7 @@
     <h1 class="header-title"><strong>Cyber Defense Training</strong></h1>
     <p class="text-paragraph"><strong>Enhance your cybersecurity skills with AI-powered training challenges.</strong></p>
     <img src="images/training.png" alt="Cyber Defense Training" class="responsive-image" />
-    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+    <button id="themeToggle"><strong>Toggle Theme</strong></button>
   </header>
 
   <main class="container">
@@ -31,8 +31,11 @@
       <button id="startLiveFraudDetectionButton">🔍 Begin AI Fraud Detection</button>
       <button id="startLivePenetrationTestingButton">🛡️ Begin Penetration Testing</button>
       <button onclick="window.location.href='cyber-defense-challenges.html'">📊 View Challenge Analytics</button>
-      <p id="challengeOutput"></p>
+      <p id="liveFraudDetectionOutput"></p>
+      <p id="penetrationTestingOutput"></p>
     </section>
+      
+    
 
     <!-- 🔹 Cyber Defense Labs -->
     <section class="card">
@@ -40,8 +43,11 @@
       <p><strong>Practice securing networks and identifying vulnerabilities.</strong></p>
       <button id="launchCyberLabButton">🔬 Start Cyber Lab Training</button>
       <button onclick="window.location.href='labs.html'">📊 View Lab Analytics</button>
-      <p id="labOutput"></p>
+      <p id="cyberLabOutput"></p>
     </section>
+    
+
+    
 
     <!-- 🔹 Gamified Cybersecurity Training -->
     <section class="card">
@@ -58,15 +64,27 @@
       <p><strong>Subscribe to AI-powered security insights and industry reports tailored for corporate risk management.</strong></p>
       <button id="subscribePremiumButton">📩 Subscribe to AI Insights</button>
       <button onclick="window.location.href='threats.html'">📊 View Latest Threat Reports</button>
+      <p id="subscriptionOutput"></p>
     </section>
+    
   </main>
-
+  
+<div class="page-trail-container">
+  <div><strong>⟵ Previous:</strong> <a href="trade-security.html">Trade Security</a></div>
+  <div><strong>Next:</strong> <a href="transport-security.html">Transport Security ⟶</a></div>
+</div>
+  
+  <section class="card">
+  <h2><strong>Live Global Threat Feed</strong></h2>
+  <div id="liveThreatFeed" class="live-feed">📡 Syncing threat updates...</div>
+</section>
+  
   <footer>
     <h2><strong>Stay Connected</strong></h2>
     <ul>
       <li><a href="index.html"><strong>Back to Home</strong></a></li>
       <li><a href="contact.html"><strong>Contact CyberShield</strong></a></li>
-      <li><a href="cyber-defense.html"><strong>Explore Cyber Defense Strategies</strong></a></li>
+      <li><a href="cyber-defence.html"><strong>Explore Cyber Defense Strategies</strong></a></li>
     </ul>
   </footer>
 

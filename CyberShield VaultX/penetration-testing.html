@@ -20,7 +20,7 @@
     <h1><strong>Live Penetration Testing</strong></h1>
     <p><strong>Simulate ethical hacking methods to identify and patch security vulnerabilities in real-time.</strong></p>
     <img src="images/penetration.png" alt="Live Penetration Testing" class="responsive-image" />
-    <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+    <button id="themeToggle"><strong>Toggle Theme</strong></button>
   </header>
 
   <main class="container">
@@ -42,7 +42,7 @@
       <h2><strong>Live AI-Powered Cyber Threat Detection</strong></h2>
       <p><strong>Get real-time AI insights and security guidance for financial protection, threat detection, and digital safety.</strong></p>
       <button id="runThreatSimulationButton">🔍 Activate AI Threat Detection</button>
-      <p id="threatOutput"></p>
+      <p id="threatSimulationOutput"></p>
     </section>
 
     <section class="card">
@@ -54,7 +54,7 @@
     <section class="card">
       <h2><strong>CyberShield AI Marketplace</strong></h2>
       <p>Purchase AI-driven cybersecurity reports and solutions.</p>
-      <button onclick="buyProduct('threatReport')">Buy Threat Intelligence Report</button>
+      <button id="buyThreatReportButton">Buy Threat Intelligence Report</button>
     </section>
 
     <section class="card">
@@ -64,7 +64,17 @@
       <p id="enterpriseSecurityOutput"></p>
     </section>
   </main>
-
+  
+<div class="page-trail-container">
+  <div><strong>⟵ Previous:</strong> <a href="passenger-security.html">Passenger Security</a></div>
+  <div><strong>Next:</strong> <a href="predictive-progress.html">Predictive Progress ⟶</a></div>
+</div>
+  
+  <section class="card">
+  <h2><strong>Live Global Threat Feed</strong></h2>
+  <div id="liveThreatFeed" class="live-feed">📡 Syncing threat updates...</div>
+</section>
+  
   <footer>
     <button onclick="window.location.href='index.html'"><strong>Back to Home</strong></button>
     <button onclick="window.location.href='training.html'"><strong>Back to Cyber Training</strong></button>

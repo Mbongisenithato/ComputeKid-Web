@@ -24,14 +24,14 @@
       <h2><strong>Public Services Security Intelligence</strong></h2>
       <p>Safeguarding urban resilience systems with AI-driven cybersecurity for emergency response, digital governance, and law enforcement tech.</p>
       <img src="images/public-services-security.png" alt="Public Services Security Protection" class="responsive-image" />
-      <button id="darkModeToggle"><strong>Toggle Dark Mode</strong></button>
+      <button id="themeToggle"><strong>Toggle Theme</strong></button>
     </section>
 
     <!-- 🔹 Emergency Response Cyber Defense -->
     <section class="card">
       <h2><strong>Emergency Network Protection</strong></h2>
       <p>Defending 911 systems, emergency alerts, and dispatch platforms from digital threats and outages.</p>
-      <button onclick="scanPublicServiceThreats()">🚒 Analyze Emergency Networks</button>
+      <button id="scanPublicServiceThreatsButton">🚒 Analyze Emergency Networks</button>
       <p id="publicServicesSecurityOutput"></p>
     </section>
 
@@ -49,7 +49,17 @@
       <button onclick="window.location.href='law-enforcement-security.html'">🚓 View Law Enforcement Security</button>
     </section>
   </main>
-
+  
+<div class="page-trail-container">
+  <div><strong>⟵ Previous:</strong> <a href="progress-tracker.html">Progress Tracker</a></div>
+  <div><strong>Next:</strong> <a href="public-transport-security.html">Public Transport Security ⟶</a></div>
+</div>
+  
+  <section class="card">
+  <h2><strong>Live Global Threat Feed</strong></h2>
+  <div id="liveThreatFeed" class="live-feed">📡 Syncing threat updates...</div>
+</section>
+  
   <!-- 🔹 Footer -->
   <footer>
     <h2><strong>Stay Connected</strong></h2>
