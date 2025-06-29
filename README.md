@@ -1,1 +1,1 @@
-# ComputeKid-Web
+# computekid-web
